@@ -9,13 +9,13 @@ import javax.swing.JFrame;
 import javax.swing.table.DefaultTableModel;
 
 public class VentanaParcial extends JFrame {
+	Medallista med;
 	private int c = 0;
 	Registro registro;
 	Mostrar mostrar;
-	ArrayList<Medallista> medallista;
 	private DefaultTableModel ref_tab;
 
-	private ArrayList<Medallista> ave;
+	private ArrayList<Medallista> medallista;
 
 	VentanaParcial() {
 		super("Medallistas");
@@ -51,25 +51,21 @@ public class VentanaParcial extends JFrame {
 
 	}
 
-	/*public void agregarAve(String nom, String esp, int edad, int puntos) {
+	public void agregarMedallista(String nom, String apellido, String tipo, int numero, int edad, int peso, int altura, int celular, String direccion, String puesto) {
 		if (c == 0) {
-			Aves ave1 = new Aves("piolin", "canario", 12, 98);
-			ave.add(ave1);
-			Aves ave2 = new Aves("kevin", "guacamaya", 34, 39);
-			ave.add(ave2);
-			Aves ave3 = new Aves("carioca", "aguila", 3, 1);
-			ave.add(ave3);
-			Aves ave4 = new Aves("scuttle", "loro", 71, 63);
-			ave.add(ave4);
-			Aves ave5 = new Aves("valiant", "paloma", 20, 5);
-			ave.add(ave5);
-			Aves nuevaAve = new Aves(nom, esp, edad, puntos);
-			ave.add(nuevaAve);
+			Medallista med1 = new Medallista("Usain", "Bolt", "Cedula", 107626262, 32, 78, 185, 310001722, "Calle 12 #34-5", "Puesto 1");
+			medallista.add(med1);
+			Medallista med2 = new Medallista("Mariana", "Pajón", "Cedula", 145926262, 27, 58, 167, 323401722, "Calle 1 #10-5", "Puesto 1");
+			medallista.add(med2);
+			Medallista med3 = new Medallista("Eduard", "Fierron", "Cedula", 1070178280, 18, 50, 172, 320601722, "Cra 3 #9-5", "Puesto 1");
+			medallista.add(med3);
+			Medallista nuevaAve = new Medallista(nom, apellido, tipo, numero, edad, peso, altura, celular, direccion, puesto);
+			medallista.add(nuevaAve);
 			c++;
 			actualizarTabla();
 		} else {
-			Aves nuevaAve = new Aves(nom, esp, edad, puntos);
-			ave.add(nuevaAve);
+			Medallista nuevaAve = new Medallista(nom, apellido, tipo, numero, edad, peso, altura, celular, direccion, puesto);
+			medallista.add(nuevaAve);
 			actualizarTabla();
 		}
 	}
@@ -77,8 +73,8 @@ public class VentanaParcial extends JFrame {
 	public void actualizarTabla() {
 		// Vamos a enviar el arrayList (personas) para poder pintarlo en mi tabla que
 		// esta en la clase Listado
-		listado.refrescarLista(ave);
+		mostrar.refrescarLista(medallista);
 
-	}*/
+	}
 
 }
