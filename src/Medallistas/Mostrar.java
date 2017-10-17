@@ -1,5 +1,7 @@
 package Medallistas;
 
-public class Mostrar {
+import javax.swing.JPanel;
+
+public class Mostrar extends JPanel{
 
 }
